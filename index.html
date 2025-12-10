@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- PWA -->
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1b1510
-  <style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1b1510">
+<style>
+
     :root {
       --bg-main: #050608;
       --bg-card: #111217;
@@ -977,6 +978,17 @@
   <footer>
     © <span>Leonardo Blau</span> — Personal Trainer & Consultoria Online.
   </footer>
+  
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("service-worker.js")
+        .then(() => console.log("SW registrado"))
+        .catch((err) => console.log("Erro ao registrar SW:", err));
+    }
+  </script>
 </body>
 </html>
+
+
 
